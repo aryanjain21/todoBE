@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 //TODO: Not completed
 module.exports = (req, res, next) => {
-    console.log('oops!!!!', req, req.user)
+    // console.log('oops!!!!', req, req.user)
     if(!req.user && !req.user._id){
         return res.status(401).json({
             message :'Invalid user...'
