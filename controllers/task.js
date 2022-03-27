@@ -68,9 +68,12 @@ module.exports = {
                 throw { message: 'Task id required.' }
             }
             let task = await List.findByIdAndDelete(req.body.taskId);
+            if(!task) {
+                throw { message: 'Task does not exist.' }
+            }
             return res.json({
                 status: 200,
-                message: 'Task list fetched successfully',
+                message: 'Task deleted successfully',
                 data: task
             });
         } catch (error) {

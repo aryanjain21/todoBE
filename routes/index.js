@@ -10,6 +10,7 @@ router.post('/signup', UserController.signup);
 router.post('/login', UserController.login);
 router.post('/api/add-task', TaskController.addTask);
 router.get('/api/get-task-list', TaskController.getTaskList);
+router.post('/api/update-task', TaskController.updateTask);
 router.post('/api/delete-task', TaskController.deleteTask);
 
 module.exports = router;
